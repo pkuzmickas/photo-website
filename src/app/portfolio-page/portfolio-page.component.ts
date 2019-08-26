@@ -37,7 +37,7 @@ export class PortfolioPageComponent implements AfterViewInit {
   @HostListener('window:scroll', ['$event'])
     handleScroll(){
         const windowScroll = window.pageYOffset;
-        if (windowScroll >= this.menuPosition + 50) {
+        if (windowScroll >= this.menuPosition) {
             this.sticky = true;
         } else {
             this.sticky = false;
@@ -49,11 +49,9 @@ export class PortfolioPageComponent implements AfterViewInit {
     this.loadOrder();
     event.target.classList.add('active'); // To ADD
     if (this.prevCatTarget) {
-      console.log("REMOVING");
       this.prevCatTarget.classList.remove('active');
     } // To Remove
     this.prevCatTarget = event.target;
-    console.log("HELLOOOO");
     console.log(this.prevCatTarget.classList);
   }
 

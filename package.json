@@ -34,8 +34,10 @@
     "jquery": "^3.4.1",
     "js-sha256": "^0.9.0",
     "ng-image-placeholder": "^1.1.4",
+    "ng-lazyload-image": "^6.1.0",
     "popper.js": "^1.15.0",
     "rxjs": "^6.3.3",
+    "ws": "^7.1.2",
     "zone.js": "^0.8.26"
   },
   "devDependencies": {
