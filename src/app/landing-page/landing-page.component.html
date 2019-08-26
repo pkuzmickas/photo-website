@@ -1,0 +1,12 @@
+<div class="landing">
+    <div class="instabox">
+      <a href="https://www.instagram.com/dom.radz/" target="_blank" class="fab fa-instagram insta"></a>
+    </div>
+
+    <div class="buttons">
+      <button class="portfolio" [routerLink]="['/portfolio']" routerLinkActive="router-link-active" >PORTFOLIO</button>
+      <button class="inquiries" (click)="inquiries=true">INQUIRIES</button>
+    </div>
+
+    <app-inquiries-form [(formOn)]="inquiries"></app-inquiries-form>
+  </div>

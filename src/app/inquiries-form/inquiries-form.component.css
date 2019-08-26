@@ -1,0 +1,90 @@
+.myForm {
+  width: 40em;
+  height: 35em;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  border-radius: 15px;
+}
+form {
+  padding-top: 5em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+}
+.title {
+  font-size: 2em;
+  padding-left: 0.2em;
+}
+.row {
+  padding-top: 1em;
+}
+label {
+  color: white;
+}
+.white {
+  color: white;
+}
+.blur {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.9;
+  background-color: black;
+}
+textarea {
+  resize: none;
+}
+.simpleTitle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-size: cover;
+  width: 100%;
+  background-image: url("../../assets/title_simple.jpg");
+  background-position: 50% 50%;
+}
+.close {
+  opacity: 1;
+  padding-right: 0.3em;
+}
+.close:hover {
+  cursor: pointer;
+}
+button {
+  background-color: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+
+  -webkit-transition: color 170ms ease-in-out, border-color 170ms ease-in-out;
+  -moz-transition: color 170ms ease-in-out, border-color 170ms ease-in-out;
+  -ms-transition: color 170ms ease-in-out, border-color 170ms ease-in-out;
+  -o-transition: color 170ms ease-in-out, border-color 170ms ease-in-out;
+
+  transition: color 170ms ease-in-out, border-color 170ms ease-in-out;
+  border-radius: 4px;
+  font-size: 1.3em;
+
+}
+.submit {
+  margin-top: 0.5em;
+}
+button:hover {
+  background-color: white;
+  color:black;
+
+  -webkit-transition: color 170ms ease-in-out, border-color 170ms ease-in-out;
+  -moz-transition: color 170ms ease-in-out, border-color 170ms ease-in-out;
+  -ms-transition: color 170ms ease-in-out, border-color 170ms ease-in-out;
+  -o-transition: color 170ms ease-in-out, border-color 170ms ease-in-out;
+
+  transition: color 170ms ease-in-out, border-color 170ms ease-in-out;
+}

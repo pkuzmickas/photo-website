@@ -1,0 +1,43 @@
+<div *ngIf="formOn">
+  <div class="simpleTitle"></div>
+  <div class="blur"></div>
+  <div class="myForm">
+    <span class="title white">CONTACT</span>
+    <div class="close white" (click)="disableForm()">×</div>
+    <form>
+      <div class="row">
+        <div class="col">
+          <label for="firstName">First Name</label>
+          <input type="text" class="form-control" id="firstName" />
+        </div>
+        <div class="col">
+          <label for="lastName">Last Name</label>
+          <input type="text" class="form-control" id="lastName" />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <label for="email">Email Address</label>
+          <input type="text" class="form-control" id="email" />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <label for="subject">Subject</label>
+          <input type="text" class="form-control" id="subject" />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <label for="message">Message</label>
+          <textarea class="form-control" id="message" rows="3"></textarea>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <button class="submit">SUBMIT</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

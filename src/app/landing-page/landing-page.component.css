@@ -1,0 +1,96 @@
+
+.landing{
+  height:100%; background-size:cover; width:auto;
+  background-image:url('../../assets/title.jpg');
+  background-position:50% 50%;
+}
+button {
+  background-color: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+
+  -webkit-transition: color 170ms ease-in-out, border-color 170ms ease-in-out;
+  -moz-transition: color 170ms ease-in-out, border-color 170ms ease-in-out;
+  -ms-transition: color 170ms ease-in-out, border-color 170ms ease-in-out;
+  -o-transition: color 170ms ease-in-out, border-color 170ms ease-in-out;
+
+  transition: color 170ms ease-in-out, border-color 170ms ease-in-out;
+  border-radius: 4px;
+  text-align: center;
+  font-family: quantum;
+  font-size: 4em;
+  display:block;
+
+}
+button:hover {
+  background-color: white;
+  color:black;
+
+  -webkit-transition: color 170ms ease-in-out, border-color 170ms ease-in-out;
+  -moz-transition: color 170ms ease-in-out, border-color 170ms ease-in-out;
+  -ms-transition: color 170ms ease-in-out, border-color 170ms ease-in-out;
+  -o-transition: color 170ms ease-in-out, border-color 170ms ease-in-out;
+
+  transition: color 170ms ease-in-out, border-color 170ms ease-in-out;
+}
+.buttons {
+  width: fit-content;
+  margin-right: 7em;
+  margin-left: auto;
+  padding-top: 22.8em;
+}
+.portfolio {
+  margin-bottom: 0.85em;
+}
+.insta {
+  color:white;
+  font-size: 3em;
+  text-decoration: none;
+  position:absolute;
+  top:-3px;
+  -webkit-transition: color 170ms ease-in-out, border-color 170ms ease-in-out;
+  -moz-transition: color 170ms ease-in-out, border-color 170ms ease-in-out;
+  -ms-transition: color 170ms ease-in-out, border-color 170ms ease-in-out;
+  -o-transition: color 170ms ease-in-out, border-color 170ms ease-in-out;
+  cursor: pointer!important;
+
+  transition: color 170ms ease-in-out, border-color 170ms ease-in-out;
+}
+.insta:hover {
+  color:black;
+
+  -webkit-transition: color 170ms ease-in-out, border-color 170ms ease-in-out;
+  -moz-transition: color 170ms ease-in-out, border-color 170ms ease-in-out;
+  -ms-transition: color 170ms ease-in-out, border-color 170ms ease-in-out;
+  -o-transition: color 170ms ease-in-out, border-color 170ms ease-in-out;
+
+  transition: color 170ms ease-in-out, border-color 170ms ease-in-out;
+  cursor: default;
+
+}
+.instabox {
+  width: 42px;
+  height: 42px;
+  position:absolute;
+  top: 55.5%;
+  left: 2.5em;
+  -webkit-transition: color 170ms ease-in-out, border-color 170ms ease-in-out;
+  -moz-transition: color 170ms ease-in-out, border-color 170ms ease-in-out;
+  -ms-transition: color 170ms ease-in-out, border-color 170ms ease-in-out;
+  -o-transition: color 170ms ease-in-out, border-color 170ms ease-in-out;
+
+  transition: color 170ms ease-in-out, border-color 170ms ease-in-out;
+}
+.instabox:hover {
+  background-color: white;
+  border-radius: 20px;
+
+  -webkit-transition: color 170ms ease-in-out, border-color 170ms ease-in-out;
+  -moz-transition: color 170ms ease-in-out, border-color 170ms ease-in-out;
+  -ms-transition: color 170ms ease-in-out, border-color 170ms ease-in-out;
+  -o-transition: color 170ms ease-in-out, border-color 170ms ease-in-out;
+
+  transition: color 170ms ease-in-out, border-color 170ms ease-in-out;
+
+  cursor: default;
+}

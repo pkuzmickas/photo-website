@@ -1,0 +1,8 @@
+<div *ngIf="!loggedIn" class="center">
+  <input [(ngModel)]="inputEntered" type="password" >
+  <button (click)='checkPassword(inputEntered)'>submit</button>
+</div>
+
+<div *ngIf="loggedIn" class="center">
+  <span>logged iN !</span>
+</div>
