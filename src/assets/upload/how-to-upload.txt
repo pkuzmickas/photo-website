@@ -1,0 +1,12 @@
+HOW TO UPLOAD:
+(Step-By-Step Process Of Making Money Fast)
+
+1. Import .jpg pictures into the Upload folder (here).
+2. Import the minified .jpg pictures using "min-" before the name
+(I use photoshop export for web and set the image size percent to 5%)
+(Further investigation for best efficiency is needed).
+3. Run the upload.bash script by opening the cmd line and typing ./upload.bash
+(WINDOWS TIP: Press SHIFT + Right Mouse Click and select the Command Prompt option).
+4. After you finish up with the script, go to the folder into which you have uploaded
+new pictures. Open the order.csv file with Excel and move the name into the column
+you want your new picture to be in.

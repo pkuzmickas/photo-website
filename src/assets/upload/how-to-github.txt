@@ -1,0 +1,9 @@
+HOW TO PUSH NEW UPDATES TO GITHUB:
+(And Earn Money Fast)
+
+1. Open Powershell in current location. (SHIFT + Right Mouse Button and select the option with it, might work).
+2. Enter these commands:
+git add .
+git commit -m "New Update Name!"
+git push
+3. Wait for the website to update & enjoy!
