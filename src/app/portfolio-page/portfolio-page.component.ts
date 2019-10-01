@@ -35,7 +35,7 @@ export class PortfolioPageComponent implements AfterViewInit {
 
   }
   @HostListener('window:scroll', ['$event'])
-    handleScroll(){
+    handleScroll() {
         const windowScroll = window.pageYOffset;
         if (windowScroll >= this.menuPosition) {
             this.sticky = true;

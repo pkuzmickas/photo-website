@@ -1,3 +1,16 @@
+.container-fluid {
+  padding-left: 60px!important;
+  padding-right: 60px!important;
+}
+.title-bg {
+  background-image: url("../../assets/bannerWEBP.webp");
+  background-color: #000000;
+  background-size:     contain;                      /* <------ */
+  background-repeat:   no-repeat;
+  background-position: center center;              /* optional, center the image */
+  height: 12.3em;
+  width: 100%;
+}
 .title {
   font-family: quantum;
   font-size: 5.5em;
@@ -13,26 +26,27 @@
   text-decoration: none;
 }
 .navbar {
-  background-color: #858585!important;
+  background-color: #000000!important;
   font-family: quantum;
   letter-spacing: 2px;
+  margin-top: -1em;
 }
 .nav-item {
-  font-size: 3.3em;
+  font-size: 2.75rem;
 
 }
 .nav-item:hover {
   cursor: pointer;
 }
 .navbar-dark .navbar-nav .nav-link {
-  color:black;
+  color:white;
 }
 .navbar-dark .navbar-nav .active>.nav-link, .navbar-dark .navbar-nav .nav-link.active, .navbar-dark .navbar-nav .nav-link.show, .navbar-dark .navbar-nav .show>.nav-link {
-  color:white;
+  color:rgb(192, 192, 192);
 }
 
 .navbar-dark .navbar-nav .nav-link:hover {
-  color:rgb(226, 226, 226);
+  color:rgb(192, 192, 192);
 }
 
 .row {
@@ -45,7 +59,8 @@
 .column {
   flex: 25%;
   max-width: 25%;
-  padding: 0 4px;
+  padding: 8px 8px;
+  padding-top: 0;
 }
 
 .column img {
@@ -102,6 +117,7 @@
   overflow: hidden;
   z-index: 10;
   width: 100%;
+  left: 0;
 }
 .pushed {
   margin-top: 7.6em;

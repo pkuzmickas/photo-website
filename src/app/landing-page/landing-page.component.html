@@ -3,10 +3,29 @@
       <a href="https://www.instagram.com/dom.radz/" target="_blank" class="fab fa-instagram insta"></a>
     </div>
 
-    <div class="buttons">
-      <button class="portfolio" [routerLink]="['/portfolio']" routerLinkActive="router-link-active" >PORTFOLIO</button>
-      <button class="inquiries" (click)="inquiries=true">INQUIRIES</button>
+    <div class="outer">
+      <div class="middle">
+        <div class="inner">
+          <button class="portfolio noSelect" [routerLink]="['/portfolio']" routerLinkActive="router-link-active" >PORTFOLIO</button>
+          <div style="width: fit-content">
+            <button class="inquiries noSelect" (click)="inqOpen=!inqOpen">CONTACT</button>
+            <div class="inq-box" *ngIf="inqOpen">
+                <span class="sickFont contact-text black cursor-default">EMAIL:</span><br>
+                <span class="sickFont contact-text white">DOM.R.CREATIVE@GMAIL.COM</span><br>
+                <div class="spacing"></div>
+                <span class="sickFont contact-text black cursor-default">FACEBOOK</span><br>
+                <a href="https://www.facebook.com/domas.radzevicius" target="_blank" class="sickFont contact-text white fb-link">DOMAS RADZEVICIUS</a>
+
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <app-inquiries-form [(formOn)]="inquiries"></app-inquiries-form>
+    <div class="buttons">
+
+
+    </div>
+
+    <!-- <app-inquiries-form [(formOn)]="inquiries"></app-inquiries-form> -->
   </div>
