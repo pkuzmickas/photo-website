@@ -12,11 +12,11 @@ import { FormsModule } from '@angular/forms';
 import { LazyLoadImageModule, intersectionObserverPreset } from 'ng-lazyload-image';
 
 
-const appRoutes: Routes = [
-  { path: '', component: LandingPageComponent },
-  { path: 'portfolio', component: PortfolioPageComponent },
-  { path: 'admin', component:  AdminComponent}
-];
+// const appRoutes: Routes = [
+//   { path: '', component: AppComponent },
+//   { path: 'portfolio', component: PortfolioPageComponent },
+//   { path: 'admin', component:  AdminComponent}
+// ];
 
 @NgModule({
   declarations: [
@@ -29,10 +29,10 @@ const appRoutes: Routes = [
   imports: [
     BrowserModule,
     NgbModule,
-    RouterModule.forRoot(
-      appRoutes,
-      { enableTracing: true } // <-- debugging purposes only
-    ),
+    // RouterModule.forRoot(
+    //   appRoutes,
+    //   { enableTracing: true } // <-- debugging purposes only
+    // ),
     HttpClientModule,
     FormsModule,
     LazyLoadImageModule.forRoot({

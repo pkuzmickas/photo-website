@@ -1,4 +1,4 @@
-<div class="landing">
+<div class="landing" id="startTarget">
     <div class="instabox">
       <a href="https://www.instagram.com/dom.radz/" target="_blank" class="fab fa-instagram insta"></a>
     </div>
@@ -6,7 +6,7 @@
     <div class="outer">
       <div class="middle">
         <div class="inner">
-          <button class="portfolio noSelect" [routerLink]="['/portfolio']" routerLinkActive="router-link-active" >PORTFOLIO</button>
+          <button class="portfolio noSelect" (click)="scroll()" >PORTFOLIO</button>
           <div style="width: fit-content">
             <button class="inquiries noSelect" (click)="inqOpen=!inqOpen">CONTACT</button>
             <div class="inq-box" *ngIf="inqOpen">

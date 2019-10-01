@@ -1,14 +1,15 @@
 .container-fluid {
   padding-left: 60px!important;
   padding-right: 60px!important;
+  height: 100%;
 }
 .title-bg {
   background-image: url("../../assets/bannerWEBP.webp");
   background-color: #000000;
   background-size:     contain;                      /* <------ */
   background-repeat:   no-repeat;
-  background-position: center center;              /* optional, center the image */
-  height: 12.3em;
+  background-position: top center;              /* optional, center the image */
+  height: 11.3em;
   width: 100%;
 }
 .title {

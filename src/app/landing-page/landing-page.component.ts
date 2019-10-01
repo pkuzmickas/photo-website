@@ -5,9 +5,15 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './landing-page.component.html',
   styleUrls: ['./landing-page.component.css']
 })
-export class LandingPageComponent  {
+export class LandingPageComponent {
 
   inqOpen = false;
+
+  scroll() {
+    let target = document.getElementById('scrollTarget');
+    target.scrollIntoView();
+  }
+
 
   constructor() { }
 

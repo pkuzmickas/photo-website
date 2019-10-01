@@ -60,6 +60,11 @@ export class PortfolioPageComponent implements AfterViewInit {
     this.modalPic = pic;
   }
 
+  scroll() {
+    let target = document.getElementById('startTarget');
+    target.scrollIntoView();
+  }
+
   loadOrder() {
     this.http.get('assets/pics/' + this.curCategory + '/order.csv', { responseType: 'text' })
       .subscribe(

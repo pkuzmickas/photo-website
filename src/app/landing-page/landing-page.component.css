@@ -15,18 +15,18 @@
 .inner {
   margin-left: auto;
   margin-right: 6%;
-  margin-top: 11.5em;
+  margin-top: 9.5em;
   height: 24em;
   width: fit-content;
 
 }
 
 .landing {
-  background: url("../../assets/title.jpg") no-repeat center center fixed;
+  background: url("../../assets/title.jpg") no-repeat left center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  height: 100%;
+  height: 101%;
 }
 button {
   background-color: transparent;
