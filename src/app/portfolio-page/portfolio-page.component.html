@@ -9,11 +9,7 @@
 >
   <ul class="navbar-nav nav-fill w-100">
     <li class="nav-item">
-      <a
-        class="nav-link"
-        (click)='scroll()'
-        >HOME</a
-      >
+      <a class="nav-link" (click)="scroll()">HOME</a>
     </li>
     <li class="nav-item">
       <a class="nav-link active" (click)="changeCat(0, $event)" id="first"
@@ -43,14 +39,38 @@
     />
   </div>
 
-  <div class="row" [class.pushed]="sticky">
-    <div class="column" *ngFor="let col of columns">
-      <img
-        *ngFor="let pic of col"
-        src="../../assets/pics/{{ curCategory }}/{{ pic }}"
-        class="picture"
-        (click)="openModal(pic)"
-      />
+  <div [class.pushed]="sticky" *ngIf="curCategory != categories[1]">
+    <div *ngFor="let fRow of fData">
+      <div class="row">
+        <img
+          *ngFor="let pic of fRow[0]"
+          src="../../assets/pics/{{ curCategory }}/{{ pic }}"
+          class="picture col-lg-4 col-md-4 col-sm-12"
+          (click)="openModal(pic)"
+        />
+      </div>
+      <div class="row">
+        <!-- BUG HERE SOMEWHERE, CANT READ ROW1? -->
+        <img
+          *ngFor="let pic of fRow[1]"
+          src="../../assets/pics/{{ curCategory }}/{{ pic }}"
+          class="picture col-lg-6 col-md-6 col-sm-12"
+          (click)="openModal(pic)"
+        />
+      </div>
+    </div>
+  </div>
+
+  <div [class.pushed]="sticky" *ngIf="curCategory == categories[1]">
+    <div *ngFor="let fRow of data">
+      <div class="row">
+        <img
+          *ngFor="let pic of fRow"
+          src="../../assets/pics/{{ curCategory }}/{{ pic }}"
+          class="picture col-lg-4 col-md-4 col-sm-12"
+          (click)="openModal(pic)"
+        />
+      </div>
     </div>
   </div>
 </div>
