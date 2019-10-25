@@ -4,7 +4,7 @@
 
 <nav
   class="navbar navbar-expand-sm bg-dark navbar-dark justify-content-center"
-  [class.sticky]="sticky"
+  [class.sticky]="sticky" [class.animateIn]="sticky && !scrollDown" [class.animateOut]="sticky && scrollDown"
   #stickyMenu
 >
   <ul class="navbar-nav nav-fill w-100">
@@ -50,7 +50,6 @@
         />
       </div>
       <div class="row">
-        <!-- BUG HERE SOMEWHERE, CANT READ ROW1? -->
         <img
           *ngFor="let pic of fRow[1]"
           src="../../assets/pics/{{ curCategory }}/{{ pic }}"

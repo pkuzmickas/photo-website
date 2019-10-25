@@ -29,10 +29,14 @@ export class PortfolioPageComponent implements AfterViewInit {
   data = [];
   fData = []; // formatted
 
+  lastScrollTop;
+  scrollDown = false;
+
   ngAfterViewInit(): void {
     const element = document.getElementById('first') as HTMLElement;
     this.prevCatTarget = element;
     this.menuPosition = this.menuElement.nativeElement.offsetTop;
+    this.lastScrollTop = this.menuPosition;
   }
 
   constructor(private http: HttpClient) {
@@ -42,8 +46,24 @@ export class PortfolioPageComponent implements AfterViewInit {
   @HostListener('window:scroll', ['$event'])
   handleScroll() {
     const windowScroll = window.pageYOffset;
-    if (windowScroll >= this.menuPosition) {
+    if (windowScroll > this.menuPosition) {
       this.sticky = true;
+      if (this.lastScrollTop <= this.menuPosition) {
+        this.lastScrollTop = this.menuPosition;
+      }
+
+      let st = window.pageYOffset || document.documentElement.scrollTop;
+      if (st > this.lastScrollTop) {
+        this.scrollDown = true;
+      } else {
+        if (windowScroll > this.menuPosition + 50) {
+          this.scrollDown = false;
+        }
+      }
+      this.lastScrollTop = st <= 0 ? 0 : st;
+
+
+
     } else {
       this.sticky = false;
     }
@@ -63,7 +83,6 @@ export class PortfolioPageComponent implements AfterViewInit {
       this.prevCatTarget.classList.remove('active');
     } // To Remove
     this.prevCatTarget = event.target;
-    console.log(this.prevCatTarget.classList);
   }
 
   openModal(pic) {
