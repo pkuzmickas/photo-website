@@ -31,6 +31,7 @@ export class PortfolioPageComponent implements AfterViewInit {
 
   lastScrollTop;
   scrollDown = false;
+  scrolledUpOnce = false;
 
   ngAfterViewInit(): void {
     const element = document.getElementById('first') as HTMLElement;
@@ -46,27 +47,29 @@ export class PortfolioPageComponent implements AfterViewInit {
   @HostListener('window:scroll', ['$event'])
   handleScroll() {
     const windowScroll = window.pageYOffset;
-    if (windowScroll > this.menuPosition) {
+
+    if (windowScroll > this.menuPosition + 100) {
       this.sticky = true;
-      if (this.lastScrollTop <= this.menuPosition) {
-        this.lastScrollTop = this.menuPosition;
-      }
-
-      let st = window.pageYOffset || document.documentElement.scrollTop;
-      if (st > this.lastScrollTop) {
-        this.scrollDown = true;
-      } else {
-        if (windowScroll > this.menuPosition + 50) {
-          this.scrollDown = false;
-        }
-      }
-      this.lastScrollTop = st <= 0 ? 0 : st;
-
-
-
-    } else {
+    } else if (windowScroll <= this.menuPosition) {
+      this.scrolledUpOnce = false;
       this.sticky = false;
     }
+
+    // if (this.lastScrollTop <= this.menuPosition) {
+    //   this.lastScrollTop = this.menuPosition;
+    // }
+    const st = window.pageYOffset || document.documentElement.scrollTop;
+
+    if (st > this.lastScrollTop) {
+      this.scrollDown = true;
+    } else {
+      this.scrollDown = false;
+      if (windowScroll > this.menuPosition + 100) {
+        this.scrolledUpOnce = true;
+      }
+    }
+    this.lastScrollTop = st <= 0 ? 0 : st;
+
   }
   changeCat(cat, event) {
     let target = document.getElementById('scrollTarget');
