@@ -7,27 +7,14 @@
   width: 100%;
 }
 
-.middle {
-  display: table-cell;
-  vertical-align: middle;
-}
-
 .inner {
   margin-left: auto;
   margin-right: 6%;
   margin-top: 9.5em;
-  height: 24em;
+  height: 36%;
   width: fit-content;
-
 }
 
-.landing {
-  background: url("../../assets/title.jpg") no-repeat left center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  height: 101%;
-}
 button {
   background-color: transparent;
   color: #fff;
@@ -41,8 +28,11 @@ button {
   transition: color 170ms ease-in-out, border-color 170ms ease-in-out;
   text-align: center;
   font-family: quantum;
-  font-size: 4em;
+  font-size: 2.3rem;
   display: block;
+  letter-spacing: 3px;
+  padding-left: 30px;
+  padding-right: 23px;
 }
 button:hover {
   background-color: white;
@@ -152,4 +142,82 @@ button:hover {
 }
 .fb-link:hover {
   color: white;
+}
+
+/* mobile */
+.landing {
+  background: url("../../assets/title_mobile.png") no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  height: 103%;
+}
+
+.title-text {
+  background: url("../../assets/title_text.png") no-repeat;
+  background-size: 100%;
+  width: 47%;
+  height: 15em;
+  position: absolute;
+  top: 4em;
+  left: 4em;
+}
+.inner {
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: 0;
+}
+.middle {
+  vertical-align: bottom;
+  display: table-cell;
+}
+.inquiries {
+  width: 100%;
+}
+.portfolio {
+  margin-bottom: 0.33em;
+}
+.instabox {
+  top: auto;
+  bottom: 1rem;
+  left: 44%;
+}
+/* computer */
+@media (min-width: 1000px) {
+  .landing {
+    background: url("../../assets/title.jpg") no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    height: 101%;
+  }
+  .title-text {
+    display: none;
+  }
+  .inner {
+    margin-right: 6%;
+    margin-top: 1em;
+    margin-bottom: 0;
+    height: 24%;
+  }
+  .middle {
+    vertical-align: middle;
+  }
+  .inquiries-container {
+    width: fit-content;
+  }
+  .inquiries {
+    width: none;
+  }
+  button {
+    font-size: 4em;
+  }
+  .portfolio {
+    margin-bottom: 0.85em;
+  }
+  .instabox {
+    top: 55.5%;
+    left: 2.5em;
+    bottom: auto;
+  }
 }

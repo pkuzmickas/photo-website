@@ -55,9 +55,6 @@ export class PortfolioPageComponent implements AfterViewInit {
       this.sticky = false;
     }
 
-    // if (this.lastScrollTop <= this.menuPosition) {
-    //   this.lastScrollTop = this.menuPosition;
-    // }
     const st = window.pageYOffset || document.documentElement.scrollTop;
 
     if (st > this.lastScrollTop) {

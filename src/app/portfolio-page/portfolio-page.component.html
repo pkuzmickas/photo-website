@@ -4,32 +4,46 @@
 
 <nav
   class="navbar navbar-expand-sm bg-dark navbar-dark justify-content-center"
-  [class.sticky]="sticky" [class.animateIn]="sticky && !scrollDown" [class.goOut]="sticky && scrollDown && !scrolledUpOnce"
+  [class.sticky]="sticky"
+  [class.animateIn]="sticky && !scrollDown"
+  [class.goOut]="sticky && scrollDown && !scrolledUpOnce"
   [class.animateOut]="sticky && scrollDown && scrolledUpOnce"
   #stickyMenu
 >
-  <ul class="navbar-nav nav-fill w-100">
-    <li class="nav-item">
-      <a class="nav-link" (click)="scroll()">HOME</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link active" (click)="changeCat(0, $event)" id="first"
-        >PORTRAIT</a
-      >
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" (click)="changeCat(1, $event)">COMPOSITIONS</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" (click)="changeCat(2, $event)">FOOD</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" (click)="changeCat(3, $event)">LANDSCAPES</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" (click)="changeCat(4, $event)">OTHER</a>
-    </li>
-  </ul>
+  <div class="container">
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbar1"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav nav-fill w-100">
+        <li class="nav-item">
+          <a class="nav-link" (click)="scroll()">HOME</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" (click)="changeCat(0, $event)" id="first"
+            >PORTRAIT</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="changeCat(1, $event)">COMPOSITIONS</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="changeCat(2, $event)">FOOD</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="changeCat(3, $event)">LANDSCAPES</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="changeCat(4, $event)">OTHER</a>
+        </li>
+      </ul>
+    </div>
+  </div>
 </nav>
 <div class="container-fluid">
   <div *ngIf="modalOpened">
