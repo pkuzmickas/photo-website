@@ -197,7 +197,7 @@ button:hover {
 /* computer */
 @media (min-width: 1000px) {
   .landing {
-    background: url("../../assets/title.jpg") no-repeat center center;
+    background: url("../../assets/title.jpg") no-repeat left center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;

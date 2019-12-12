@@ -9,6 +9,7 @@ import { HttpClient } from '@angular/common/http';
 export class PortfolioPageComponent implements AfterViewInit {
   @ViewChild('stickyMenu') menuElement: ElementRef;
 
+
   menuPosition: any;
 
   categories = [
@@ -32,7 +33,12 @@ export class PortfolioPageComponent implements AfterViewInit {
   lastScrollTop;
   scrollDown = false;
   scrolledUpOnce = false;
-
+  screenWidth = 0;
+  modalHor = false;
+  @HostListener('window:resize', ['$event'])
+  onResize(event?) {
+     this.screenWidth = window.innerWidth;
+  }
   ngAfterViewInit(): void {
     const element = document.getElementById('first') as HTMLElement;
     this.prevCatTarget = element;
@@ -42,7 +48,7 @@ export class PortfolioPageComponent implements AfterViewInit {
 
   constructor(private http: HttpClient) {
     this.loadOrder(this.stdCols);
-
+    this.onResize();
   }
   @HostListener('window:scroll', ['$event'])
   handleScroll() {
@@ -85,9 +91,14 @@ export class PortfolioPageComponent implements AfterViewInit {
     this.prevCatTarget = event.target;
   }
 
-  openModal(pic) {
+  openModal(pic, hor?) {
     this.modalOpened = true;
     this.modalPic = pic;
+    if (hor) {
+      this.modalHor = true;
+    } else {
+      this.modalHor = false;
+    }
   }
 
   scroll() {
