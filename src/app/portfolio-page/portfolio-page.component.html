@@ -10,18 +10,18 @@
   [class.animateOut]="sticky && scrollDown && scrolledUpOnce"
   #stickyMenu
 >
-  <div class="navbar-mobile-button">
+  <div class="navbar-mobile-button" (click)='mNavbarOpen = !mNavbarOpen'>
     <span class="cur-nav-item">{{ curCategory }}</span>
     <img class="nav-arrow" src="../../assets/arrow.png" />
   </div>
-  <div class="navbar-container" *ngIf="screenWidth > 1000">
+  <div class="navbar-container" *ngIf="screenWidth > 1000 || mNavbarOpen">
     <ul class="navbar-nav nav-fill w-100">
       <li class="nav-item">
         <a class="nav-link" (click)="scroll()">HOME</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link active" (click)="changeCat(0, $event)" id="first"
-          >PORTRAIT</a
+        <a class="nav-link" [class.active]="screenWidth > 1000" (click)="changeCat(0, $event)" id="first"
+          >PEOPLE</a
         >
       </li>
       <li class="nav-item">

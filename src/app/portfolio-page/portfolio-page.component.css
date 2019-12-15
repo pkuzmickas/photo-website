@@ -6,12 +6,12 @@
 .cur-nav-item {
   font-family: quantum;
   letter-spacing: 2px;
-  font-size: 4rem;
+  font-size: 3rem;
   color: white;
 }
 .nav-arrow {
-  width: 2em;
-  margin-top: -1.8em;
+  width: 1.5rem;
+  margin-top: -1rem;
   margin-left: 1.5em;
 }
 .navbar-mobile-button:hover {
@@ -45,7 +45,7 @@
   letter-spacing: 2px;
 }
 .nav-item {
-  font-size: 2.75rem;
+  font-size: 1.75rem;
 }
 .nav-item:hover {
   cursor: pointer;
@@ -153,6 +153,9 @@
 .pushed {
   margin-top: 98px;
 }
+.navbar-container {
+  display: contents!important;
+}
 /* computer */
 @media (min-width: 1000px) {
   .title-bg {
@@ -162,9 +165,7 @@
   .navbar-mobile-button {
     display: none;
   }
-  .navbar-container {
-    display: contents;
-  }
+
   .sticky {
     padding: .5rem 1rem;
   }
@@ -177,5 +178,8 @@
   }
   .modal-content {
     max-height: 800px;
+  }
+  .nav-item {
+    font-size: 2.75rem;
   }
 }

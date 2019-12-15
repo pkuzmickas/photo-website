@@ -35,9 +35,11 @@ export class PortfolioPageComponent implements AfterViewInit {
   scrolledUpOnce = false;
   screenWidth = 0;
   modalHor = false;
+  mNavbarOpen = false;
+
   @HostListener('window:resize', ['$event'])
   onResize(event?) {
-     this.screenWidth = window.innerWidth;
+    this.screenWidth = window.innerWidth;
   }
   ngAfterViewInit(): void {
     const element = document.getElementById('first') as HTMLElement;
@@ -73,6 +75,10 @@ export class PortfolioPageComponent implements AfterViewInit {
     }
     this.lastScrollTop = st <= 0 ? 0 : st;
 
+    if (this.mNavbarOpen) {
+      this.mNavbarOpen = false;
+    }
+
   }
   changeCat(cat, event) {
     let target = document.getElementById('scrollTarget');
@@ -89,6 +95,11 @@ export class PortfolioPageComponent implements AfterViewInit {
       this.prevCatTarget.classList.remove('active');
     } // To Remove
     this.prevCatTarget = event.target;
+
+
+    if (this.mNavbarOpen) {
+      this.mNavbarOpen = false;
+    }
   }
 
   openModal(pic, hor?) {
