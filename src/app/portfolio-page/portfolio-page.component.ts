@@ -124,7 +124,11 @@ export class PortfolioPageComponent implements AfterViewInit {
           this.data = [];
           this.fData = [];
           data.split('\n').forEach(element => {
-            this.data.push(element.split(';'));
+            if(element.includes(';')) {
+              this.data.push(element.split(';'));
+            } else if(element.includes(',')) {
+              this.data.push(element.split(','));
+            }
           });
           console.log(this.data);
           if (this.curCategory !== this.categories[1]) {
