@@ -8,20 +8,20 @@ if [ "$(ls -A ./upload)" ]; then
     echo "( ͡° ͜ʖ ͡°)( ͡° ͜ʖ ͡°)( ͡° ͜ʖ ͡°)( ͡° ͜ʖ ͡°)( ͡° ͜ʖ ͡°)"
     printf '\n'
 else
-    echo "UPLOAD DIRECTORY is Empty!!!!!!!"
+    echo "UPLOAD (upload/) DIRECTORY is Empty!!!!!!!"
     exit
 fi
 
 for filename in ./upload/*; do
+
+    ans=-1
 
     if [ ${filename:9:4} == "min-" ]
       then
         continue
     fi
 
-    while [[ "${ans}" > 5 ]] || [[ "${ans}" < 0 ]]; do
-    printf '\n'
-    echo "MAKE SURE YOU HAVE THE MINIFIED FILE AS WELL ! ! ! !"
+    while [ "${ans}" -gt 5 -o "${ans}" -lt 0 ]; do
     printf '\n'
     echo "What category does ${filename:9} go to?"
     echo "0 - People"
@@ -40,14 +40,13 @@ for filename in ./upload/*; do
 
     categories=(people compositions food landscapes other)
 
-    echo "Moving main file and minified file to the designated folder..."
+    echo "Moving main file to the designated folder..."
     mv "$filename" pics/${categories[ans]}
-    mv "${filename:0:9}min-${filename:9}" pics/${categories[ans]}
     echo "Adding filename to order.csv..."
+    echo >> pics/${categories[ans]}/order.csv
     echo "${filename:9}" >> pics/${categories[ans]}/order.csv
     echo "Done! ( ͡° ͜ʖ ͡°)( ͡° ͜ʖ ͡°)( ͡° ͜ʖ ͡°)( ͡° ͜ʖ ͡°)( ͡° ͜ʖ ͡°)"
     printf '\n'
-    ans=-1;
 
 done
 
