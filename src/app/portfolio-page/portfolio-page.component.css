@@ -99,6 +99,8 @@
 } */
 .picture {
   padding-bottom: 20px;
+  height: 100%;
+
 }
 .picture:hover {
   opacity: 0.7;
@@ -159,7 +161,7 @@
 /* computer */
 @media (min-width: 1000px) {
   .title-bg {
-    background-image: url("../../assets/bannerWEBP.webp");
+    background-image: url("../../assets/banner.jpg");
     height: 11em;
   }
   .navbar-mobile-button {
@@ -175,6 +177,7 @@
   }
   .picture {
     padding-bottom: 30px;
+    height: 100%;
   }
   .modal-content {
     max-height: 93%;

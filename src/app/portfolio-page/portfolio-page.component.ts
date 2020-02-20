@@ -10,8 +10,8 @@ export class PortfolioPageComponent implements AfterViewInit {
   @ViewChild('stickyMenu') menuElement: ElementRef;
 
 
-  menuPosition: any;
-
+  menuPosition: number;
+  menuHeight: number;
   categories = [
     'people', 'compositions', 'food', 'landscapes', 'other'
   ];
@@ -36,6 +36,7 @@ export class PortfolioPageComponent implements AfterViewInit {
   screenWidth = 0;
   modalHor = false;
   mNavbarOpen = false;
+  windowScroll = window.pageYOffset;
 
   @HostListener('window:resize', ['$event'])
   onResize(event?) {
@@ -45,6 +46,7 @@ export class PortfolioPageComponent implements AfterViewInit {
     const element = document.getElementById('first') as HTMLElement;
     this.prevCatTarget = element;
     this.menuPosition = this.menuElement.nativeElement.offsetTop;
+    this.menuHeight = this.menuElement.nativeElement.offsetHeight;
     this.lastScrollTop = this.menuPosition;
   }
 
@@ -54,11 +56,10 @@ export class PortfolioPageComponent implements AfterViewInit {
   }
   @HostListener('window:scroll', ['$event'])
   handleScroll() {
-    const windowScroll = window.pageYOffset;
-
-    if (windowScroll > this.menuPosition + 100) {
+    this.windowScroll = window.pageYOffset;
+    if (this.windowScroll > this.menuPosition + this.menuHeight) {
       this.sticky = true;
-    } else if (windowScroll <= this.menuPosition) {
+    } else if (this.windowScroll <= this.menuPosition) {
       this.scrolledUpOnce = false;
       this.sticky = false;
     }
@@ -69,13 +70,13 @@ export class PortfolioPageComponent implements AfterViewInit {
       this.scrollDown = true;
     } else {
       this.scrollDown = false;
-      if (windowScroll > this.menuPosition + 100) {
+      if (this.windowScroll > this.menuPosition + 100) {
         this.scrolledUpOnce = true;
       }
     }
     this.lastScrollTop = st <= 0 ? 0 : st;
 
-    if (this.mNavbarOpen) {
+    if (this.mNavbarOpen && this.sticky) {
       this.mNavbarOpen = false;
     }
 
@@ -130,7 +131,6 @@ export class PortfolioPageComponent implements AfterViewInit {
               this.data.push(element.split(','));
             }
           });
-          console.log(this.data);
           if (this.curCategory !== this.categories[1]) {
             for (let i = 0; i < this.data.length; i++) {
               const row = this.data[i];
