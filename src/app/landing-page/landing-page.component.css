@@ -188,8 +188,60 @@ button:hover {
   opacity: 0.9;
   overflow: hidden;
 }
-/* computer */
-@media (min-width: 1000px) {
+
+
+/* Landscape */
+@media (min-width: 500px) {
+  .landing {
+    background: url("../../assets/title.jpg") no-repeat left center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    /* THIS */
+    height: 106%;
+  }
+  .title-text {
+    display: none;
+  }
+  .inner {
+    margin-right: 6%;
+    /* THIS */
+    margin-top: 4vh;
+    margin-bottom: 0;
+  }
+  .middle {
+    vertical-align: middle;
+  }
+  .inq-box {
+    top: 36%;
+    left: 36%;
+  }
+  /* THIS */
+  button {
+    font-size: 2em;
+  }
+  .portfolio {
+    margin-bottom: 0.85em;
+  }
+  .instabox {
+    /* THIS */
+    top: auto;
+    bottom: 7%;
+    left: 49%;
+  }
+}
+/* REALLY SMALL PHONES */
+@media (max-height: 350px) {
+  .inner {
+    margin-top: -15vh;
+  }
+}
+/* tablet */
+@media (min-width: 700px) {
+
+}
+/* PC */
+@media (min-width: 1100px) {
   .landing {
     background: url("../../assets/title.jpg") no-repeat left center;
     -webkit-background-size: cover;

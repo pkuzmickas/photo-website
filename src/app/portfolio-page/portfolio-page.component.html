@@ -15,7 +15,7 @@
     <img class="nav-arrow" src="../../assets/arrow.png" />
   </div>
   <div class="navbar-container" *ngIf="screenWidth > 1000 || mNavbarOpen">
-    <ul class="navbar-nav nav-fill w-100">
+    <ul class="navbar-nav nav-fill w-100 flex-fix">
       <li class="nav-item">
         <a class="nav-link" (click)="scroll()">HOME</a>
       </li>
@@ -55,7 +55,9 @@
         <img
           *ngFor="let pic of fRow[0]"
           src="../../assets/pics/{{ curCategory }}/{{ pic }}"
-          class="picture col-lg-4 col-md-4 col-sm-12"
+          class="picture col-lg-4 col-md-4"
+          [class.col-sm-4]="screenWidth >= 500"
+          [class.col-sm-12]="screenWidth < 500"
           (click)="openModal(pic)"
         />
       </div>
@@ -63,7 +65,9 @@
         <img
           *ngFor="let pic of fRow[1]"
           src="../../assets/pics/{{ curCategory }}/{{ pic }}"
-          class="picture col-lg-6 col-md-6 col-sm-12"
+          class="picture col-lg-6 col-md-6"
+          [class.col-sm-6]="screenWidth >= 500"
+          [class.col-sm-12]="screenWidth < 500"
           (click)="openModal(pic, true)"
         />
       </div>

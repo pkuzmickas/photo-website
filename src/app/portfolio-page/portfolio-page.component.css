@@ -158,8 +158,34 @@
 .navbar-container {
   display: contents!important;
 }
+/* Landscape */
+@media (min-width: 500px) {
+  .title-bg {
+    height: 23vw;
+  }
+  .navbar {
+    display: grid;
+  }
+  .flex-fix {
+    flex-direction: column!important;
+  }
+  .modal-content {
+    max-height: 92vh;
+  }
+}
+/* REALLY SMALL PHONES */
+@media (max-height: 350px) {
+
+}
+/* tablet */
+@media (min-width: 700px) {
+
+}
 /* computer */
 @media (min-width: 1000px) {
+  .flex-fix {
+    flex-direction: row;
+  }
   .title-bg {
     background-image: url("../../assets/banner.jpg");
     height: 11em;
