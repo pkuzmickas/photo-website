@@ -57,7 +57,7 @@ export class PortfolioPageComponent implements AfterViewInit {
   @HostListener('window:scroll', ['$event'])
   handleScroll() {
     this.windowScroll = window.pageYOffset;
-    if (this.windowScroll > this.menuPosition + this.menuHeight) {
+    if (!this.sticky && this.windowScroll > this.menuPosition + this.menuHeight) {
       this.sticky = true;
     } else if (this.windowScroll <= this.menuPosition) {
       this.scrolledUpOnce = false;
@@ -70,13 +70,14 @@ export class PortfolioPageComponent implements AfterViewInit {
       this.scrollDown = true;
     } else {
       this.scrollDown = false;
-      if (this.windowScroll > this.menuPosition + 100) {
+      if (this.windowScroll > this.menuPosition + this.menuHeight) {
         this.scrolledUpOnce = true;
       }
     }
     this.lastScrollTop = st <= 0 ? 0 : st;
-
-    if (this.mNavbarOpen && this.sticky) {
+    console.log(this.lastScrollTop);
+    console.log(st);
+    if (this.mNavbarOpen && this.sticky && !this.scrollDown) {
       this.mNavbarOpen = false;
     }
 

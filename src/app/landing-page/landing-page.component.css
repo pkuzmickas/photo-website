@@ -189,7 +189,12 @@ button:hover {
   overflow: hidden;
 }
 
-
+/* REALLY SMALL PHONES */
+@media (max-height: 350px) {
+  .inner {
+    margin-top: -15vh;
+  }
+}
 /* Landscape */
 @media (min-width: 500px) {
   .landing {
@@ -230,12 +235,7 @@ button:hover {
     left: 49%;
   }
 }
-/* REALLY SMALL PHONES */
-@media (max-height: 350px) {
-  .inner {
-    margin-top: -15vh;
-  }
-}
+
 /* tablet */
 @media (min-width: 700px) {
 
