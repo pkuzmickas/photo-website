@@ -95,7 +95,7 @@ export class PortfolioPageComponent implements AfterViewInit {
     event.target.classList.add('active'); // To ADD
     if (this.prevCatTarget) {
       this.prevCatTarget.classList.remove('active');
-    } // To Remove
+    }
     this.prevCatTarget = event.target;
 
 

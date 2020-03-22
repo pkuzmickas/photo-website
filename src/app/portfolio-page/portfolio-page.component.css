@@ -130,7 +130,7 @@
   display: contents!important;
 }
 /* Landscape */
-@media (min-width: 500px) {
+@media (min-width: 500px) and (orientation: landscape) {
   .title-bg {
     height: 23vw;
   }
@@ -146,6 +146,7 @@
   .modal-content {
     max-height: 92vh;
   }
+
 }
 /* REALLY SMALL PHONES */
 @media (max-height: 350px) {
@@ -153,7 +154,24 @@
 }
 /* tablet */
 @media (min-width: 700px) {
-
+  .navbar {
+    display: grid;
+  }
+  .flex-fix {
+    flex-direction: column!important;
+  }
+  .modal-content {
+    max-height: 80vh;
+  }
+  .hor-height {
+    max-height: 42vh;
+  }
+  .nav-item {
+    font-size: 3vh;
+  }
+  .title-bg {
+    height: 23vw;
+  }
 }
 /* computer */
 @media (min-width: 1000px) {
@@ -183,7 +201,8 @@
     height: 100%;
   }
   .modal-content {
-    max-height: 93%;
+    max-height: 80vh;
+    max-width: 80vw;
   }
   .nav-item {
     font-size: 3vw;
