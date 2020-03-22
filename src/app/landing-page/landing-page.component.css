@@ -196,7 +196,7 @@ button:hover {
   }
 }
 /* Landscape */
-@media (min-width: 500px) {
+@media (min-width: 500px) and (orientation: landscape) {
   .landing {
     background: url("../../assets/title.jpg") no-repeat left center;
     -webkit-background-size: cover;
@@ -218,7 +218,7 @@ button:hover {
     vertical-align: middle;
   }
   .inq-box {
-    top: 36%;
+    top: 24vh;
     left: 36%;
   }
   /* THIS */
@@ -287,6 +287,8 @@ button:hover {
     padding-left: 0.7em;
     padding-top: 0.2em;
     position: relative;
+    top:0;
+    left:0;
   }
   .modal-blocker {
     display: none;
