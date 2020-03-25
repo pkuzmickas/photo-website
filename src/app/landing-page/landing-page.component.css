@@ -240,7 +240,7 @@ button:hover {
   }
   /* THIS */
   button {
-    font-size: 2em;
+    font-size: 4.5vw;
   }
   .portfolio {
     margin-bottom: 0.85em;
@@ -272,10 +272,13 @@ button:hover {
   .inner {
     margin-top: 7vh;
   }
+  button {
+    font-size: 4.5vw;
+  }
 
 }
 /* PC */
-@media (min-width: 1000px) {
+@media (min-width: 1100px) {
   .contact-text {
     font-size: 1em;
     letter-spacing: 1px;
