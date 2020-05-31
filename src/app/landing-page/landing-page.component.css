@@ -80,7 +80,6 @@ button:hover {
   z-index: 1000;
 }
 .instabox:hover {
-  background-color: white;
   border-radius: 20px;
 
   -webkit-transition: color 170ms ease-in-out, border-color 170ms ease-in-out;
@@ -174,8 +173,9 @@ button:hover {
   margin-top: -2px;
   padding-left: 0.7em;
   padding-top: 0.2em;
+  padding-right: 0.7em;
   position: absolute;
-  width: 67vw;
+  /* width: 67vw; */
   top: 43%;
 }
 .modal-blocker {
@@ -195,7 +195,7 @@ button:hover {
     margin-top: -15vh;
   }
   .inq-box {
-    width: 73vw;
+    /* width: 73vw; */
   }
   .contact-text {
     font-size: 4.6vw;
@@ -233,7 +233,7 @@ button:hover {
   .inq-box {
     top: 24vh;
     left: 33vw;
-    width: fit-content;
+    /* width: fit-content; */
     height: fit-content;
     padding-right: 0.7em;
     padding-bottom: 0.2em;
@@ -259,7 +259,7 @@ button:hover {
     font-size: 9vw;
   }
   .inq-box {
-    width: 40vh;
+    /* width: 40vh; */
     height: 19vh;
   }
   .contact-text {

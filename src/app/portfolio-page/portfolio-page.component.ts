@@ -75,8 +75,6 @@ export class PortfolioPageComponent implements AfterViewInit {
       }
     }
     this.lastScrollTop = st <= 0 ? 0 : st;
-    console.log(this.lastScrollTop);
-    console.log(st);
     if (this.mNavbarOpen && this.sticky && !this.scrollDown) {
       this.mNavbarOpen = false;
     }
