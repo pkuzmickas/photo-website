@@ -169,7 +169,7 @@ button:hover {
 .inq-box {
   background-color: rgb(199, 188, 184, 0.72);
   border: 2px solid white;
-  height: 8em;
+  /* height: 8em; */
   margin-top: -2px;
   padding-left: 0.7em;
   padding-top: 0.2em;
@@ -326,7 +326,7 @@ button:hover {
     background-color: rgb(199, 188, 184, 0.72);
     border: 2px solid white;
     width: 100%;
-    height: 8em;
+    /* height: 8em; */
     margin-top: -2px;
     padding-left: 0.7em;
     padding-top: 0.2em;

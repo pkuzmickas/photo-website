@@ -1,8 +1,8 @@
 <div class="landing" id="startTarget">
     <div class="title-text"></div>
-    <div class="instabox">
+    <!-- <div class="instabox">
       <a href="https://www.instagram.com/dom.radz/" target="_blank" class="fab fa-instagram insta"></a>
-    </div>
+    </div> -->
 
     <div class="outer">
       <div class="middle">
@@ -12,11 +12,14 @@
             <button class="inquiries noSelect" (click)="inqOpen=!inqOpen">CONTACT</button>
             <div class="modal-blocker" *ngIf="inqOpen" (click)='inqOpen=false'></div>
             <div class="inq-box" *ngIf="inqOpen">
-                <span class="sickFont contact-text black cursor-default">EMAIL</span><span class='fas fa-envelope'></span><br>
+                <span class="sickFont contact-text black cursor-default">send me an EMAIL</span> <span class='fas fa-envelope'></span><br>
                 <span class="sickFont contact-text white">DOM.R.CREATIVE@GMAIL.COM</span><br>
                 <div class="spacing"></div>
-                <span class="sickFont contact-text black cursor-default">FACEBOOK</span><span class='fab fa-facebook'></span><br>
+                <span class="sickFont contact-text black cursor-default">follow me on FACEBOOK</span> <span class='fab fa-facebook'></span><br>
                 <a href="https://www.facebook.com/domas.radzevicius" target="_blank" class="sickFont contact-text white fb-link">DOMAS RADZEVICIUS</a>
+                <div class="spacing"></div>
+                <span class="sickFont contact-text black cursor-default">follow me on INSTAGRAM</span> <span class='fab fa-instagram'></span><br>
+                <a href="https://www.instagram.com/dom.radz/" target="_blank" class="sickFont contact-text white fb-link">DOM.RADZ</a>
 
             </div>
           </div>
