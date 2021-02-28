@@ -1,6 +1,12 @@
-# DomasSite
+# Photography Portfolio Website
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8.
+Built a photography portfolio website for a friend using Angular/TypeScript.
+
+https://domradz.com/
+
+![Landing Picture](https://i.ibb.co/2WGs05V/image.png)
+![People Page](https://i.ibb.co/wN1zvzY/image.png)
+![image](https://user-images.githubusercontent.com/15807240/109429836-0bb10b80-79f6-11eb-9cb3-76affc7d10aa.png)
 
 ## Development server
 
