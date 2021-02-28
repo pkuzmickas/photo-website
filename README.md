@@ -7,6 +7,7 @@ https://domradz.com/
 ![Landing Picture](https://i.ibb.co/2WGs05V/image.png)
 ![People Page](https://i.ibb.co/wN1zvzY/image.png)
 ![image](https://user-images.githubusercontent.com/15807240/109429836-0bb10b80-79f6-11eb-9cb3-76affc7d10aa.png)
+![image](https://user-images.githubusercontent.com/15807240/109429959-9db91400-79f6-11eb-8cfc-398c90c11a48.png)
 
 ## Development server
 
